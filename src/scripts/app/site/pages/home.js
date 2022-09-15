@@ -29,11 +29,49 @@ const browseProduct = {
     desc:'Specifier Range'
   },
 };
-
+const smartRange={
+  item1:{
+    img:'/images/brilliant/brilliant16.jpg',
+    desc:'Air Movement'
+  },  
+  item2:{
+    img:'/images/brilliant/brilliant17.jpg',
+    desc:'Cameras'
+  },  
+  item3:{
+  //   img:'/images/brilliant/brilliant20.jpg',
+  vid:'video/mov_bbb.mp4',
+    desc:'Gateways'
+  },  
+  item4:{
+    img:'/images/brilliant/brilliant18.jpg',
+    desc:'Globes'
+  },  
+  item5:{
+    img:'/images/brilliant/brilliant19.jpg',
+    desc:'Indoor Lightning'
+  },  
+  item6:{
+    img:'/images/brilliant/brilliant20.jpg',
+    desc:'Outdoor Lightning'
+  },  
+  item7:{
+    img:'/images/brilliant/brilliant21.jpg',
+    desc:'Plugs and Powerboards'
+  },  
+  item8:{
+    img:'/images/brilliant/brilliant22.jpg',
+    desc:'Security'
+  },  
+  item9:{
+    img:'/images/brilliant/brilliant23.jpg',
+    desc:'Switches'
+  },
+};
 export default {
   templates:['site/home'],
   comp:()=>{
-    let page = getComp('site/home',{browseProduct});
+    let page = getComp('site/home',{browseProduct, smartRange});
     return page;
   }
 };

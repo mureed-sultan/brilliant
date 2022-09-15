@@ -1,10 +1,12 @@
 <div id="home" data-template="site/home">
     <section class="slider">
-        <div class="slider-image">
-            <img src="../../../../images/brilliant/brilliant05.jpg" alt="">
-            <img src="../../../../images/brilliant/brilliant24.jpg" alt="">
-            <img src="../../../../images/brilliant/brilliant25.jpg" alt="">
-            <img src="../../../../images/brilliant/brilliant26.jpg" alt="">
+        <div class="slider-image slider">
+            <figure>
+                <img data-src="images/brilliant/brilliant05.jpg" alt="">
+                <img data-src="images/brilliant/brilliant24.jpg" alt="">
+                <img data-src="images/brilliant/brilliant25.jpg" alt="">
+                <img data-src="images/brilliant/brilliant26.jpg" alt="">
+            </figure>
         </div>
         <div class="slider-text">
             <div class="slider-box">
@@ -35,7 +37,7 @@
         <h4>Browse Our Product</h4>
         <div class="product-list" data-list='{"prop":"browseProduct"}'>
             <a href="#">
-                <img src={val.img} alt="No image fouind">
+                <img data-src={val.img} alt="No image fouind">
                 <p>{val.desc}</p>
             </a>
         </div>
@@ -44,18 +46,42 @@
         <h4>There's an easy way to turn a home into a smart home</h4>
         <div class="banner">
             <div class="banner-image">
-                <img src="../../../../images/brilliant/brilliant13.png" alt="">
+                <img data-src="images/brilliant/brilliant13.png" alt="">
             </div>
             <summary>
                 <h6>Unlock your BrilliantSmart home today</h6>
-                <p>Control it all through the BrilliantSmart app. Manage Wi-Fi signal usage, monitor and control automated devices.</p>
+                <p>Control it all through the BrilliantSmart app. Manage Wi-Fi signal usage, monitor and control
+                    automated devices.</p>
                 <button class="main-button">Find Out More</button>
                 <div class="flex">
-                    <img src="../../../../images/brilliant/brilliant14.png" alt="">
-                    <img src="../../../../images/brilliant/brilliant15.png" alt="">
+                    <img data-src="images/brilliant/brilliant14.png" alt="">
+                    <img data-src="images/brilliant/brilliant15.png" alt="">
                 </div>
             </summary>
         </div>
     </section>
-
+    <section class="smart-range product">
+        <h4>Our Smart Range</h4>
+        <div class="product-list" data-list='{"prop":"smartRange"}'>
+            <div>
+                <img data-if=val.img data-src={val.img} alt="">
+                <video autoplay loop data-elif=val.vid>
+                    <source src={val.vid} type="video/mp4" />
+                </video>
+                <p>{val.desc}</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <base href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/">
+        <div id="slider">
+            <figure>
+                <img src="austin-fireworks.jpg" alt>
+                <img src="taj-mahal_copy.jpg" alt>
+                <img src="ibiza.jpg" alt>
+                <img src="ankor-wat.jpg" alt>
+                <img src="austin-fireworks.jpg" alt>
+            </figure>
+        </div>
+    </section>
 </div>

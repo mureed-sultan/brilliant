@@ -7,7 +7,7 @@
     }
 
     .slider-text {
-      @apply grid grid-cols-1 w-11o12 m-auto;
+      @apply grid grid-cols-1 w-11o12 m-auto relative;
 
       @screen md {
         @apply grid-cols-4;
@@ -36,7 +36,42 @@
           @apply text-base pb-3;
         }
       }
+
+      &::before {
+        content: " ";
+        background-color: aqua;
+        @apply w-1o4 h-1 absolute top-0;
+        /* animation: 5s 1s slider-bar infinite ease-in-out; */
+        animation: slider-bar infinite ease-in-out;
+        animation-duration: 10s;
+        translate: 0,0;
+      }
     }
+  }
+
+  @keyframes slider-bar {
+    1%{
+      translate: 0 , 0;
+      background-color: rebeccapurple;
+    }
+    33% {
+      translate: 100% 0;
+      background-color: red;
+    }
+
+    66% {
+      translate: 200% 0;
+      background-color: coral;
+    }
+
+    99% {
+      translate: 300% 0;
+      background-color: saddlebrown;
+    }
+
+
+
+
   }
 
   .product {
@@ -67,31 +102,37 @@
     .banner {
       background-image: url('../../images/brilliant/brilliant27.jpg');
       @apply grid grid-cols-1;
-      @screen md{
+
+      @screen md {
         @apply grid-cols-2;
         height: 550px;
       }
+
       @apply h-auto;
+
       .banner-image {
         @apply relative;
 
         img {
           height: 100%;
           @apply static;
-          top: -60px;
-          @screen md{
+          top: -55px;
+
+          @screen md {
             @apply absolute;
-            height:120%;
+            height: 110%;
           }
         }
+
         order: 2;
 
       }
 
       summary {
-        @screen md{
-        order:2;  
+        @screen md {
+          order: 2;
         }
+
         @apply flex flex-col justify-center items-center w-9o12 m-auto;
 
         button {
@@ -105,4 +146,31 @@
     }
 
   }
+
+  .smart-range {
+    @apply mt-8 mx-auto w-11o12;
+  }
+
+
+
+  div#slider {
+    overflow: hidden;
+  }
+
+  .slider {
+    overflow: hidden;
+  }
+
+  .slider figure img {
+    width: 100%;
+    float: left;
+  }
+
+  .slider figure {
+    display: flex;
+    position: relative;
+    width: 500%;
+    animation: 30s slidy infinite;
+  }
+
 }
