@@ -1,7 +1,7 @@
 /* purgecss start ignore */
 :root {
   --text: #000;
-  --background: #fff;
+  --background: #D6D4C3;
 
   --black: #000;
   --white: #fff;
@@ -16,7 +16,7 @@
   --error: #EC1E65;
 
   --width-max: 1280px;
-  --height-navigation: 120px;
+  --height-navigation: 75px;
   --height-input: 72px;
 
   --font-body: 'neue-haas-grotesk-display';
@@ -80,10 +80,10 @@ body {
   }
 
   #main-content {
+    @apply bg-white;
     @apply relative;
-    @apply min-h-screen;
-    @apply w-full max-w-full;
-    @apply z-20;
+    max-width: 1320px;
+    @apply w-full m-auto;
   }
 
   footer,

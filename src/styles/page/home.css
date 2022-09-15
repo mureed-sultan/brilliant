@@ -1,338 +1,108 @@
 #home {
-  main {
-    @apply grid;
-    @apply grid-cols-24;
-  }
+  @apply overflow-hidden;
 
-  .todo {
-    button {
-      @apply vertical-center right-0;
-      @apply mr-0;
-
-      @apply px-0 py-0;
-      @apply font-semibold;
-      @apply leading-none;
-      @apply bg-transparent;
-
-      width: 32px;
-      height: 32px;
-
-      font-family: var(--font-mono);
-      font-size: 16px;
-
-      transition: color 0.22s ease-in-out,
-                  border-color 0.22s ease-in-out;
+  .slider {
+    .slider-image {
+      @apply relative flex;
     }
 
-    ol {
-      @apply ml-0;
-
-      li {
-        @apply relative;
-        @apply flex;
-        @apply items-center;
-        @apply py-3;
-        @apply pr-10;
-        @apply ml-0;
-        @apply border-b border-solid;
-
-        border-color: var(--grey-light);
-      }
-
-      button {
-        color: var(--highlight);
-        border-color: var(--highlight);
-
-        &:hover {
-          color: var(--highlight);
-          border-color: var(--highlight);
-        }
-      }
-    }
-
-    form {
-      @apply relative;
-
-      input {
-        @apply px-0 py-3;
-        @apply pr-10;
-        @apply w-full;
-      }
-
-      button {
-        color: var(--white);
-        border-color: var(--success);
-        background-color: var(--success);
-      }
-    }
-  }
-
-  header {
-    @apply flex;
-    @apply flex-col;
-    @apply items-center;
-    @apply justify-center;
-    @apply col-span-22;
-    @apply col-start-2;
-    @apply mb-32;
-
-    margin-top: calc(var(--height-navigation) * 1.5);
-
-    @screen lg {
-      @apply col-span-18;
-      @apply col-start-4;
-      @apply mb-48;
-
-      margin-top: calc(var(--height-navigation) * 2);
-    }
-
-    figure {
-      @apply mx-auto;
-      @apply select-none;
-      @apply pointer-events-none;
-      @apply w-full;
-      @apply mb-6;
+    .slider-text {
+      @apply grid grid-cols-1 w-11o12 m-auto;
 
       @screen md {
-        @apply w-10o12;
+        @apply grid-cols-4;
       }
 
-      @screen lg {
-        width: 540px;
-      }
+      @apply shadow-2xl;
+      /* @apply bg-red-500; */
 
-      img {
-        @apply relative;
-        @apply z-10;
-      }
-    }
+      .slider-box {
+        @apply p-5;
 
-    summary {
-      @apply relative;
-      @apply text-center;
+        border-bottom: 1px solid gray;
 
-      max-width: var(--width-max);
-
-      h1 {
         @screen md {
-          @apply w-10o12;
-          @apply mx-auto;
+          border: none;
+          border-right: 1px solid gray;
+        }
+
+
+        &:last-child {
+          border: none;
+        }
+
+        h4,
+        p {
+          @apply text-base pb-3;
         }
       }
-
-      h4 {
-        @screen md {
-          @apply w-9o12;
-          @apply mx-auto;
-        }
-      }
-    }
-
-    h1,
-    h4 {
-      @apply text-center;
-
-      color: var(--text);
-    }
-
-    h1 {
-      @apply leading-none;
-      @apply mb-5;
-    }
-
-    h4 {
-      @apply mb-10;
     }
   }
 
-  section {
-    @apply col-span-24;
+  .product {
+    @apply w-11o12 mx-auto mt-16;
 
-    h2,
-    h5 {
-      @apply mb-6;
+    h4 {
+      @apply pb-10;
     }
 
-    h5 {
-      color: var(--link-color);
-    }
-
-    h6 {
-      @apply mb-3;
-    }
-
-    p {
-      color: #425465;
-    }
-
-    .content {
-      @apply col-span-18;
-      @apply col-start-4;
-    }
-
-    .header {
-      @apply col-span-18;
-      @apply col-start-4;
-      @apply mb-12;
-
-      @screen md {
-        @apply col-span-12;
-        @apply col-start-4;
-      }
-    }
-
-    &.who,
-    &.intro,
-    &.example,
-    &.deployed {
-      @apply grid;
-      @apply grid-cols-24;
-      @apply py-24;
-
-      background-color: #f6f9fc;
+    .product-list {
+      @apply grid grid-cols-2 gap-6;
 
       @screen lg {
-        @apply py-32;
+        @apply grid-cols-4
       }
 
-      h2 {
-
-        @screen md {
-          @apply w-9o12;
-        }
+      p {
+        @apply py-4 font-bold;
       }
     }
+  }
 
-    &.intro {
-      @apply grid;
-      @apply grid-cols-24;
-      @apply py-32;
+  .brilliant-smart {
+    h4 {
+      @apply text-center text-3xl w-6o12 mx-auto my-10;
+    }
 
-      .content {
-        @apply grid;
+    .banner {
+      background-image: url('../../images/brilliant/brilliant27.jpg');
+      @apply grid grid-cols-1;
+      @screen md{
+        @apply grid-cols-2;
+        height: 550px;
+      }
+      @apply h-auto;
+      .banner-image {
+        @apply relative;
 
-        @screen md {
-          @apply grid-cols-2;
-          @apply gap-10;
-        }
-
-        @screen lg {
-          @apply grid-cols-4;
-        }
-
-        .item {
-          @screen xm {
-            @apply mb-12;
+        img {
+          height: 100%;
+          @apply static;
+          top: -60px;
+          @screen md{
+            @apply absolute;
+            height:120%;
           }
         }
+        order: 2;
+
       }
-    }
 
-    &.deployed {
-      .header {
-        @apply col-span-18;
-        @apply col-start-4;
-        @apply text-center;
-
-        @screen md {
-          @apply col-span-12;
-          @apply col-start-7;
+      summary {
+        @screen md{
+        order:2;  
         }
-      }
+        @apply flex flex-col justify-center items-center w-9o12 m-auto;
 
-      .content {
-        @apply flex;
-        @apply items-center;
-        @apply justify-center;
-
-        @screen xm {
-          @apply col-span-22;
-          @apply col-start-2;
-          @apply flex-wrap;
+        button {
+          border: none;
         }
 
         img {
-          @apply mx-3 my-4;
-
-          @screen md {
-            @apply mx-6;
-          }
+          @apply h-10 mt-10 ml-5;
         }
       }
     }
 
-    &.example {
-      .content {
-        @screen md {
-          @apply grid;
-          @apply grid-cols-18;
-          @apply gap-10;
-          @apply items-start;
-        }
-      }
-
-      .consoles {
-        @apply col-span-10;
-
-        @screen lg {
-          @apply col-span-12;
-        }
-      }
-
-      .result {
-        @apply px-6 py-6;
-        @apply col-span-8;
-
-        background-color: var(--white);
-
-        @screen lg {
-          @apply col-span-6;
-        }
-
-        h6 {
-          @apply mb-6;
-
-          font-size: 18px;
-          font-weight: 600;
-        }
-      }
-
-      /* .console {
-        @apply w-full;
-        @apply rounded-lg;
-
-        height: 440px;
-        background-color: var(--background);
-        box-shadow: 0 50px 100px -20px rgba(#0148e0,0.222),0 30px 60px -30px rgba(#000,0.333);
-      } */
-    }
-
-    &.who {
-      .header {
-        @apply text-center;
-        @apply col-span-20;
-        @apply col-start-3;
-
-        @screen md {
-          @apply col-span-14;
-          @apply col-start-6;
-        }
-
-        h3 {
-          @apply inline;
-          @apply mr-2;
-        }
-      }
-
-      .content {
-        @apply text-center;
-        @apply col-span-20;
-        @apply col-start-3;
-
-        .button {
-          @apply mx-auto;
-        }
-      }
-    }
   }
 }

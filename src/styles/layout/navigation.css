@@ -19,14 +19,17 @@
 }
 
 nav {
-  @apply fixed;
-  @apply top-0 left-0;
+  max-width: 1320px;
+  @apply m-auto;
   @apply grid grid-flow-row;
   @apply w-full;
   @apply pointer-events-none;
-  @apply z-50;
-
-  height: var(--height-navigation);
+  @apply bg-black;
+  &:after{
+    content:" ";
+    border:1px solid #FDE800;
+    @apply col-span-24;
+  }
   grid-template-columns: repeat(24,1fr);
 
   a,
@@ -35,17 +38,15 @@ nav {
   }
 
   ul {
-    @apply flex;
+    @apply block;
     @apply w-full;
     @apply items-center justify-end;
-    @apply px-6;
-    @apply z-50;
-
+    @apply px-6 h-full;
     @screen md {
-      @apply px-8;
+      @apply flex;
+      height: var(--height-navigation);
     }
 
-    height: var(--height-navigation);
 
     grid-column-start: 1;
     grid-column-end: span 24;
@@ -55,12 +56,30 @@ nav {
         @apply cursor-pointer;
         @apply mr-auto;
         @apply z-50;
+        @apply flex w-full justify-center;
+        @screen md{
+          @apply justify-start w-auto;
+        }
+        img{
+          @apply h-20 w-20;
+          @screen md{
+            @apply h-10 w-10;
+          }
+        }
       }
 
       &.navigation {
+       a{
+        @apply text-white mx-1;
+
+       }
         @apply flex;
         @apply items-center;
         @apply ml-auto;
+        @apply flex-col;
+        @screen md{
+        @apply flex-row;
+        }
 
         transition: opacity 0.88s cubic-bezier(0.230, 1.000, 0.320, 1.000);
         will-change: opacity;
@@ -72,6 +91,7 @@ nav {
           }
         }
       }
+      
     }
 
     a {
@@ -206,3 +226,8 @@ nav {
   }
 }
 /* purgecss end ignore */
+.main-button{
+  background-color: #FDE900;
+  @apply rounded-full px-4 py-1;
+  color: black !important;
+}
