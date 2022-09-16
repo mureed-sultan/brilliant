@@ -36,43 +36,9 @@
           @apply text-base pb-3;
         }
       }
-
-      &::before {
-        content: " ";
-        background-color: aqua;
-        @apply w-1o4 h-1 absolute top-0;
-        /* animation: 5s 1s slider-bar infinite ease-in-out; */
-        animation: slider-bar infinite ease-in-out;
-        animation-duration: 10s;
-        translate: 0,0;
-      }
     }
   }
 
-  @keyframes slider-bar {
-    1%{
-      translate: 0 , 0;
-      background-color: rebeccapurple;
-    }
-    33% {
-      translate: 100% 0;
-      background-color: red;
-    }
-
-    66% {
-      translate: 200% 0;
-      background-color: coral;
-    }
-
-    99% {
-      translate: 300% 0;
-      background-color: saddlebrown;
-    }
-
-
-
-
-  }
 
   .product {
     @apply w-11o12 mx-auto mt-16;
