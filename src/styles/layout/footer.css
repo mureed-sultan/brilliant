@@ -1,3 +1,39 @@
 footer {
-  @apply hidden;
+  max-width: 1320px;
+  @apply m-auto;
+  @apply block bg-black pb-16;
+  @screen md{
+    @apply grid grid-cols-6 bg-black pb-16 gap-5;
+  }
+  div{
+    img{
+      @apply h-16 mb-10;
+    }
+    h6{
+      @apply text-base text-gray-700 mb-5;
+    }
+    p{
+      @apply text-sm text-gray-600;
+    }
+    a{
+      @apply text-white block;
+    }
+  }
+  .footer-item{
+    @apply mt-16;
+  }
+  .footer-subscribe{
+    @apply row-start-2;
+    grid-column: 2/span 3;
+    input{
+      @apply w-full rounded pl-5 mb-3;
+    }
+    button{
+      @apply px-20;
+    }
+
+  }
+  .footer-social{
+    @apply row-start-2 col-start-5;
+  }
 }

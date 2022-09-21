@@ -31,7 +31,6 @@ li:not(.logo) {
 
 p {
   &:not(:last-child) {
-    @apply mb-8;
   }
 
   &:empty {

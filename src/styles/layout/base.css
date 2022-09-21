@@ -135,7 +135,7 @@ body {
     transition: color 0.33s ease-in-out;
 
     &:hover {
-      color: var(--text);
+     @apply text-yellow-500;
     }
   }
 

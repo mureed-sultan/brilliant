@@ -21,6 +21,8 @@
 @import 'page/error';
 @import 'page/home';
 @import 'page/docs';
+@import 'page/catalogues';
+@import 'page/news';
 /* purgecss end ignore */
 
 /* Utilities */
