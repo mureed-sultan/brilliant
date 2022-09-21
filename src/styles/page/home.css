@@ -3,11 +3,10 @@
 
   .slider {
     .slider-image {
-      @apply relative flex;
+      @apply flex;
     }
-
     .slider-text {
-      @apply grid grid-cols-1 w-11o12 m-auto relative;
+      @apply grid grid-cols-1 w-11o12 m-auto;
 
       @screen md {
         @apply grid-cols-4;
@@ -143,24 +142,5 @@
 
   }
 
-  div#slider {
-    overflow: hidden;
-  }
-
-  .slider {
-    overflow: hidden;
-  }
-
-  .slider figure img {
-    width: 100%;
-    float: left;
-  }
-
-  .slider figure {
-    display: flex;
-    position: relative;
-    width: 500%;
-    animation: 30s slidy infinite;
-  }
 
 }

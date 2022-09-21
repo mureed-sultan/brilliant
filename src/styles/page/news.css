@@ -1,0 +1,27 @@
+#news{
+    .news{
+        @apply m-auto text-left py-20;
+        width: 70%;
+
+        h6 {
+            @apply text-gray-600 mb-2;
+        }
+        
+        p {
+            @apply text-lg mt-4 text-3xl font-bold;
+        }
+    }
+
+    .news-list{
+        @apply grid grid-cols-2 gap-6 w-11o12 mx-auto mt-10;
+        @screen lg {
+            @apply grid-cols-4
+        }
+        h6{
+            @apply text-base mt-2;
+        }
+        p {
+            @apply py-4 text-sm text-gray-600;
+        }
+    }
+}

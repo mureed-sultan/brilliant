@@ -81,7 +81,7 @@ body {
 
   #main-content {
     @apply bg-white;
-    @apply relative;
+    /* @apply relative; */
     max-width: 1320px;
     @apply w-full m-auto;
   }
@@ -99,7 +99,7 @@ body {
 
   figure,
   section {
-    @apply relative;
+    /* @apply relative; */
   }
 
   pre,
