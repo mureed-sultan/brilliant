@@ -6,7 +6,7 @@ export default {
   comp:()=>{
     let page = getComp('site/home',{browseProduct, smartRange},{
       test1:()=>{
-        console.log("that work")
+        console.log('that work');
       }
     });
     return page;

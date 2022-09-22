@@ -42,7 +42,8 @@ main {
   @apply w-full;
 
   height: 5px;
-  background: var(--loading-color);
+  background-color: #FEE903;
+  /* background: var(--loading-color); */
 
   z-index: calc(var(--index) + 1);
 

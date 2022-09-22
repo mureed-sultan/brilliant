@@ -10,7 +10,7 @@
   --grey-mid: #a9a9a9;
   --grey-dark: #848587;
 
-  --link-color: #0000ff;
+  --link-color: #FEE903;
   --highlight: #EC1E65;
   --success: #54dd57;
   --error: #EC1E65;
@@ -127,7 +127,7 @@ body {
   }
 
   a {
-    @apply relative;
+    /* @apply relative; */
     @apply no-underline;
 
     color: var(--link-color);

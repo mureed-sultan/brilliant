@@ -23,6 +23,8 @@
 @import 'page/docs';
 @import 'page/catalogues';
 @import 'page/news';
+@import 'page/air-movement';
+@import 'page/accordion';
 /* purgecss end ignore */
 
 /* Utilities */

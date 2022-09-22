@@ -1,4 +1,5 @@
 $.fn.accordion = function(opts) {
+  // console.log(opts)
   var $accordion = this;
   var aimationTime = 500;
   opts = typeof opts == 'object' ? opts : {};

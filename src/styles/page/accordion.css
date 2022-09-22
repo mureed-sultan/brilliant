@@ -1,0 +1,162 @@
+/***
+ Accordion
+ ---------
+
+ PUG/HTML structure (base expected)
+  - optional: the H2, p elements are not styled
+  - optional: the .icon on .title is a + / –
+
+  .accordion(data-list='...')
+    .accordion-item
+      .title
+        h2 { ... }
+      .details
+        .inner
+          p { ... }
+
+ ***/
+ article {
+    &.accordion {
+      .body {
+  
+      }
+  
+      .accordion {
+        @apply w-full;
+        @apply col-span-12;
+        @apply border-t border-solid;
+  
+        border-color: var(--black);
+      }
+  
+      .accordion-item {
+        @apply relative;
+        @apply w-full;
+        @apply flex;
+        @apply flex-col;
+        @apply border-b border-solid;
+  
+        border-color: var(--black);
+  
+        .details,
+        .title {
+          a,
+          p,
+          h2 {
+            transition: color 0.44s ease-in-out;
+            will-change: color;
+            @apply text-lg;
+          }
+        }
+  
+        .title {
+          @apply relative;
+          @apply cursor-pointer;
+          @apply m-0;
+          @apply py-4;
+  
+          color: var(--text);
+  
+          transition: background-color 0.44s ease-in-out,
+                      border-radius 0.33s linear 0.10s;
+          will-change: background-color, border-radius;
+  
+          &.icon {
+            &:after,
+            &:before {
+              @apply vertical-center;
+              @apply z-10;
+  
+              content: '';
+              background-color: var(--text);
+  
+              transition: opacity, background-color 0.22s linear 0.18s;
+              will-change: opacity, background-color;
+            }
+  
+            &:before {
+              right: 6px;
+              width: 18px;
+              height: 2px;
+            }
+  
+            &:after {
+              right: 14px;
+              width: 2px;
+              height: 18px;
+            }
+          }
+  
+          > * {
+            @apply relative;
+          }
+        }
+  
+        .details {
+          @apply pointer-events-none;
+          @apply overflow-hidden;
+          @apply opacity-0;
+          @apply h-0;
+  
+          transition: opacity 0.2s linear 0s,
+                      background-color 0.44s ease-in-out;
+        }
+  
+        .inner {
+          @apply flex;
+          @apply flex-col;
+          @apply pb-6;
+  
+          @screen md {
+            @apply pb-12;
+          }
+          div{
+            @apply flex gap-4;
+            input{
+              @apply w-4 h-4;
+            }
+          }
+        }
+  
+        &.open {
+          .title {
+            color: var(--text);
+  
+            &.icon {
+              &:after {
+                @apply opacity-0;
+              }
+            }
+          }
+  
+          .details {
+            @apply pointer-events-auto;
+            @apply opacity-100;
+          }
+        }
+  
+        &.open,
+        &:hover {
+          .title {
+            > * {
+              &:after {
+                background-color: var(--text);
+              }
+            }
+          }
+  
+          .icon {
+            &:after,
+            &:before {
+  
+            }
+          }
+        }
+  
+        .icon {
+          @apply z-10;
+        }
+      }
+    }
+  }
+  

@@ -10,8 +10,8 @@ export default function() {
   addPage('news', news);
   addPaths('site', [
     'catalogues',
-    'docs/getting-started',
-    'docs/templates',
+    'products/air-movement',
+    'products/air-movement/celling-fan-with-light',
     'docs/pages',
     'docs/architecture',
     'docs/samples',

@@ -120,16 +120,27 @@ nav {
    
   }
 
-  .menu-dropdown{
-    @apply hidden absolute left-0;
+  .menu-dropdown,
+  .solution-dropdown
+  {
+    @apply hidden absolute left-0 w-full;
     top: 100%;
     /* top: 75px; */
+  }
+  .solution{
+    @apply bg-black p-10 w-full grid grid-cols-4 gap-10;
+    p{
+      @apply text-white font-bold mt-5;
+    }
   }
   .dropdown {
     @apply bg-black p-10 w-full;
     display: grid;
-    @apply grid-cols-6 gap-2;
-    h6 {
+    @apply grid-cols-2 gap-2;
+    @screen md{
+      @apply grid-cols-6;
+    }
+    a:first-child {
       @apply text-white text-base pb-3 text-yellow-700;
     }
 

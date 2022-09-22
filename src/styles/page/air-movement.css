@@ -1,0 +1,42 @@
+#air-movement{
+    /* background-color: aqua; */
+    .air-movement{
+        @apply grid grid-cols-3 gap-5 w-11o12 m-auto py-20;
+        .air-text{
+            @apply col-span-2 pr-5;
+        }
+    }
+    .air-list{
+        @apply grid grid-cols-2 gap-6 w-11o12 mx-auto py-10;
+        @screen lg {
+            @apply grid-cols-4
+        }
+        p {
+            @apply py-4 text-sm text-black font-bold;
+        }
+    }
+}
+
+.air-movement-container{
+    .title {
+        @apply m-auto text-left pt-20;
+        width: 70%;
+        
+        h6 {
+            @apply text-gray-600 mb-2 text-sm;
+        }
+        p {
+            @apply text-lg mt-4 text-gray-700;
+        }
+    }
+    .items{
+        @apply grid grid-cols-4;
+    }
+    .filter{
+
+    }
+    .product-list{
+        @apply grid grid-cols-3 gap-10 col-span-3;
+    }
+    
+}
