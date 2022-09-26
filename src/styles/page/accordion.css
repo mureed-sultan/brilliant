@@ -111,7 +111,7 @@
             @apply pb-12;
           }
           div{
-            @apply flex gap-4;
+            @apply flex items-center gap-4;
             input{
               @apply w-4 h-4;
             }

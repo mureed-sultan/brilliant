@@ -12,7 +12,7 @@ export default function() {
     'catalogues',
     'products/air-movement',
     'products/air-movement/celling-fan-with-light',
-    'docs/pages',
+    'products/air-movement/celling-fan-without-light',
     'docs/architecture',
     'docs/samples',
     'docs/questions'

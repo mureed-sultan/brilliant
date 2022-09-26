@@ -2,6 +2,7 @@
   @apply overflow-hidden;
 
   .slider {
+    @apply relative;
     .slider-image {
       @apply flex;
     }

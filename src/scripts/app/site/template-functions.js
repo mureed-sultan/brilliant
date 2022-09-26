@@ -9,3 +9,7 @@ addAction('switchCode', function({$el, arg}) {
 setTimeout(() => {
   $('.accordion').accordion();
 }, 500);
+
+addAction('test1',()=>{
+  alert('test1 work');
+});

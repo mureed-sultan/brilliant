@@ -19,7 +19,7 @@
 
 .air-movement-container{
     .title {
-        @apply m-auto text-left pt-20;
+        @apply m-auto text-left py-20;
         width: 70%;
         
         h6 {
@@ -30,13 +30,20 @@
         }
     }
     .items{
-        @apply grid grid-cols-4;
+        @apply grid gap-5 grid-cols-4 w-11o12 m-auto;
     }
     .filter{
-
+        @apply col-span-4;
+        @screen md{
+            @apply col-span-1;
+        }
     }
     .product-list{
-        @apply grid grid-cols-3 gap-10 col-span-3;
+        @apply grid grid-cols-3 gap-10 col-span-4;
+
+        @screen md{
+            @apply col-span-3;
+        }
     }
     
 }

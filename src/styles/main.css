@@ -32,3 +32,6 @@
 @import 'utilities/common';
 @import 'utilities/animation';
 
+
+/* import from node modules  */
+@import 'slick-carousel/slick/slick.css';

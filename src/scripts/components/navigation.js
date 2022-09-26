@@ -17,6 +17,10 @@ export default function () {
     toggleSolution: () => {
       $('.menu-dropdown').slideUp('slow');
       $('.solution-dropdown').slideToggle('slow');
+    },
+    toggleMenu:()=>{
+      $('.menu-list').slideToggle('slow');
+      $('.menu-button').toggleClass('change');
     }
 
   };

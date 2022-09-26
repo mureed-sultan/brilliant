@@ -1,14 +1,15 @@
 <nav role="navigation" aria-label="Top Navigation" data-template="common/navigation">
   <ul>
     <li class="logo"><img data-href="/" src="/images/brilliant/brilliant01.jpg" /></li>
-    <li class="navigation" data-name="navMenu">
-      <a data-act="click" data-func="toggleProduct">Products</a>
+    <li class="menu-list" data-name="navMenu">
+      <div class="navigation">
+      <a data-act="click" data-func="toggleProduct" class="nav-hiden">Products</a>
       <div class="menu-dropdown">
         <div class="dropdown">
           <div class="air-movement">
             <a data-href="/products/air-movement">Air Movement</a>
             <a data-href="/products/air-movement/celling-fan-with-light">Celling Fan with Light</a>
-            <a href="#">celling fan without light</a>
+            <a data-href="/products/air-movement/celling-fan-without-light">celling fan without light</a>
             <a href="#">Exhause Fan only</a>
             <a href="#">Exhause Fan and Light</a>
             <a href="#">Fan Accessory</a>
@@ -33,19 +34,19 @@
           </div>
           <div class="indoor-light">
             <a>Indoor Lightning</h6>
-            <a href="#">Batten Fix</a>
-            <a href="#">Celling Light</a>
-            <a href="#">DownLights</a>
-            <a href="#">Floor Lamp</a>
-            <a href="#">Globes</a>
-            <a href="#">LED Strip</a>
-            <a href="#">Pendents</a>
-            <a href="#">Suspenstion kit</a>
-            <a href="#">Table Lamp</a>
-            <a href="#">Task Lamp</a>
-            <a href="#">Track and Spot Lights</a>
-            <a href="#">Vanity</a>
-            <a href="#">Wall Light</a>
+              <a href="#">Batten Fix</a>
+              <a href="#">Celling Light</a>
+              <a href="#">DownLights</a>
+              <a href="#">Floor Lamp</a>
+              <a href="#">Globes</a>
+              <a href="#">LED Strip</a>
+              <a href="#">Pendents</a>
+              <a href="#">Suspenstion kit</a>
+              <a href="#">Table Lamp</a>
+              <a href="#">Task Lamp</a>
+              <a href="#">Track and Spot Lights</a>
+              <a href="#">Vanity</a>
+              <a href="#">Wall Light</a>
           </div>
           <div class="outdoor-light">
             <area>Outdoor Lightning</h6>
@@ -57,31 +58,31 @@
           </div>
           <div class="security">
             <a>Security</h6>
-            <a href="#">Cameras</a>
-            <a href="#">Security and Lightning</a>
-            <a href="#">Sensors</a>
+              <a href="#">Cameras</a>
+              <a href="#">Security and Lightning</a>
+              <a href="#">Sensors</a>
           </div>
           <div class="smart-home">
             <a>Smart Home</h6>
-            <a href="#">Air Movement</a>
-            <a href="#">Cameras</a>
-            <a href="#">Gateways</a>
-            <a href="#">Globes</a>
-            <a href="#">Indoor Light</a>
-            <a href="#">Outdoor Light</a>
-            <a href="#">Plugs and Powerboard</a>
-            <a href="#">security</a>
-            <a href="#">Switches</a>
+              <a href="#">Air Movement</a>
+              <a href="#">Cameras</a>
+              <a href="#">Gateways</a>
+              <a href="#">Globes</a>
+              <a href="#">Indoor Light</a>
+              <a href="#">Outdoor Light</a>
+              <a href="#">Plugs and Powerboard</a>
+              <a href="#">security</a>
+              <a href="#">Switches</a>
           </div>
           <div class="range">
             <a>Specifier Range</h6>
-            <a href="#">Recessed Lightning</a>
-            <a href="#">Surface Mount</a>
-            <a href="#">Track and Spot Lights</a>
-          </div>          
-        </div>  
+              <a href="#">Recessed Lightning</a>
+              <a href="#">Surface Mount</a>
+              <a href="#">Track and Spot Lights</a>
+          </div>
+        </div>
       </div>
-      <a data-act="click" data-func="toggleSolution">Solutions</a>
+      <a data-act="click" data-func="toggleSolution" class="nav-hiden">Solutions</a>
       <div class="solution-dropdown">
         <div class="solution">
           <a href="#" class="smart-home">
@@ -95,11 +96,11 @@
           <a href="#" class="specifier">
             <img data-src="/images/brilliant/brilliant03.jpg" alt="">
             <p>Specifier</p>
-          </>
-          <a href="#" class="air-protect">
-            <img data-src="/images/brilliant/brilliant04.jpg" alt="">
-            <p>Air Protector</p>
-          </a>
+            </>
+            <a href="#" class="air-protect">
+              <img data-src="/images/brilliant/brilliant04.jpg" alt="">
+              <p>Air Protector</p>
+            </a>
         </div>
       </div>
       <a data-href="/catalogues">Catalogue</a>
@@ -108,6 +109,13 @@
       <a href="#">Supports</a>
       <a href="#" class="main-button">Request a Quote</a>
       <a href="#">Login/Signup</a>
+    </div>
+    </li>
+    <li>
+      <a data-act="click" data-func="toggleMenu" class="menu-button">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+      </a>
     </li>
   </ul>
 </nav>

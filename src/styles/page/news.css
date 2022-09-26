@@ -25,3 +25,8 @@
         }
     }
 }
+.slick-nav{
+    @apply absolute flex w-11o12 m-auto;
+    left: 5%;
+    bottom: -73%;
+}
