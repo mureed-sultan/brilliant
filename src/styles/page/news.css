@@ -26,7 +26,22 @@
     }
 }
 .slick-nav{
-    @apply absolute flex w-11o12 m-auto;
-    left: 5%;
-    bottom: -73%;
+    @apply absolute flex w-11o12 m-auto justify-between;
+    height: 25rem;
+    left: 4%;
+    bottom: -25rem;
+    li{
+        @apply w-3o12;
+         button{
+            @apply text-transparent rounded-none;
+            border: none;
+         }
+
+    }
+}
+.slick-active{
+    button{
+        @apply text-transparent w-full; 
+        border-top: 5px solid yellow !important;
+    }
 }

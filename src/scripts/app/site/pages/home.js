@@ -5,11 +5,11 @@ import 'slick-carousel/slick/slick.js';
 export default {
   templates:['site/home'],
   loaded:()=>{
-    console.log($('.slider-image').slick({
+    $('.slider-image').slick({
       arrows:false,
       dots:true,
-      dotsClass:"slick-nav"
-    }))
+      dotsClass:"slick-nav",
+    })
   },
   comp:()=>{
     let page = getComp('site/home',{browseProduct, smartRange},{

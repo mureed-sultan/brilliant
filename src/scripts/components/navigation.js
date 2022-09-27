@@ -8,7 +8,7 @@ export default function () {
   const navFunction = {
     toggleProduct: () => {
       $('.solution-dropdown').slideUp('slow');
-      $('.menu-dropdown').slideToggle('slow', () => {
+        $('.menu-dropdown').slideToggle('slow', () => {
         $('.dropdown a').on('click', () => {
           $('.menu-dropdown').slideUp();
         });

@@ -6,9 +6,7 @@ addAction('switchCode', function({$el, arg}) {
   $el.add($el.siblings('.' + arg)).addClass('active');
 });
 
-setTimeout(() => {
-  $('.accordion').accordion();
-}, 500);
+$('.accordion').accordion();
 
 addAction('test1',()=>{
   alert('test1 work');

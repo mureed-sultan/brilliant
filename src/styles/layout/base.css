@@ -81,7 +81,7 @@ body {
 
   #main-content {
     @apply bg-white;
-    /* @apply relative; */
+    @apply relative z-10;
     max-width: 1320px;
     @apply w-full m-auto;
   }

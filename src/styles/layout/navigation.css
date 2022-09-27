@@ -18,6 +18,8 @@ nav {
   @apply w-full;
   @apply pointer-events-none;
   @apply bg-black;
+  @apply relative;
+  @apply z-20;
 
   &:after {
     content: " ";
@@ -305,3 +307,9 @@ nav {
 .change .bar2 {
   transform: translate(0, -6px) rotate(45deg);
 }
+.slider-index{
+  z-index: -1;
+  transition-duration: 500ms;
+}
+
+
