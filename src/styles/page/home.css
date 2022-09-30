@@ -121,8 +121,10 @@
 
   .range-slider {
     .slider-product {
-
-      @apply mt-8 flex flex-row items-center gap-10 relative;
+@screen md{
+  @apply flex-row;
+}
+      @apply mt-8 flex flex-col justify-center items-center gap-10 relative;
       height: 550px;
       background-image: url('../../images/brilliant/brilliant03.jpg');
       @apply bg-no-repeat bg-cover;
@@ -160,7 +162,7 @@
 .range-slider{
   button{
     /* background-color: yellow; */
-    @apply absolute bottom-0 z-50 w-12 p-4;
+    @apply absolute bottom-0 border-none z-50 w-12 p-4;
     background-color: yellow;
     right:80px;
     &:last-child{

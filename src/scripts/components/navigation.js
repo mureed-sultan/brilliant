@@ -19,7 +19,7 @@ export default function () {
       $('.solution-dropdown').slideToggle('slow');
     },
     toggleMenu:()=>{
-      $('.menu-list').slideToggle('slow');
+      $('.menu-list').slideToggle('slow',()=>{});
       $('.menu-button').toggleClass('change');
     }
 

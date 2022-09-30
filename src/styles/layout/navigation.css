@@ -49,7 +49,7 @@ nav {
         @apply mr-auto;
         @apply z-50;
         @apply flex w-auto justify-start;
-
+  
         img {
           @apply h-20 w-20;
 
@@ -64,6 +64,9 @@ nav {
        @screen md{
         @apply block static;
        }
+       a:hover{
+        border-bottom:2px solid yellow;
+       }
       }
    
       .navigation {
@@ -75,7 +78,7 @@ nav {
         }
 
         a {
-          @apply text-white mx-1;
+          @apply text-white mx-1 ;
         }
 
         @apply ml-auto;
