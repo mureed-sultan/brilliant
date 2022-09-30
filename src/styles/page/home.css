@@ -3,9 +3,11 @@
 
   .slider {
     @apply relative;
+
     .slider-image {
       @apply flex;
     }
+
     .slider-text {
       @apply grid grid-cols-1 w-11o12 m-auto;
 
@@ -117,31 +119,55 @@
     @apply mt-8 mx-auto w-11o12;
   }
 
-  .slider-product {
-    @apply mt-8 flex flex-row items-center gap-10 relative;
-    height: 550px;
-    background-image: url('../../images/brilliant/brilliant03.jpg');
-    @apply bg-no-repeat bg-cover;
-    div {
-      @apply ml-20;
+  .range-slider {
+    .slider-product {
 
-      h3 {
-        @apply text-5xl;
+      @apply mt-8 flex flex-row items-center gap-10 relative;
+      height: 550px;
+      background-image: url('../../images/brilliant/brilliant03.jpg');
+      @apply bg-no-repeat bg-cover;
+
+      div {
+        @apply ml-20;
+
+        h3 {
+          @apply text-5xl;
+        }
+
+        p {
+          @apply text-3xl;
+
+        }
       }
 
-      p {
-        @apply text-3xl;
+      .slider-btn {
+        @apply absolute bottom-0 right-0 w-5 h-5;
 
+        img {
+          filter: ;
+        }
       }
+
     }
-    .slider-btn {
-      @apply absolute bottom-0 right-0 w-5 h-5;
-      img{
-        filter: ;
-      }
+    .column{
+      @apply flex-col justify-center; 
     }
 
   }
 
 
+}
+.range-slider{
+  button{
+    /* background-color: yellow; */
+    @apply absolute bottom-0 z-50 w-12 p-4;
+    background-color: yellow;
+    right:80px;
+    &:last-child{
+      right: 0;
+    }
+    img{
+      @apply w-4 h-4;
+    }
+  }
 }

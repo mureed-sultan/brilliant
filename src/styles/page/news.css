@@ -26,12 +26,20 @@
     }
 }
 .slick-nav{
-    @apply absolute flex w-11o12 m-auto justify-between;
-    height: 25rem;
+    @apply absolute flex flex-col w-11o12 m-auto justify-between;
+    @screen md{
+        @apply flex-row;
+        bottom: -25rem;
+        height: 25rem;
+    }
+    bottom: -30rem;
+    height: 30rem;
     left: 4%;
-    bottom: -25rem;
     li{
-        @apply w-3o12;
+        @screen md{
+            @apply w-3o12;
+        }
+        @apply w-full;
          button{
             @apply text-transparent rounded-none;
             border: none;
@@ -40,8 +48,11 @@
     }
 }
 .slick-active{
-    button{
-        @apply text-transparent w-full; 
-        border-top: 5px solid yellow !important;
+    @apply border-none;
+    @screen md{
+        button{
+            @apply text-transparent w-full; 
+            border-top: 5px solid yellow !important;
+        }
     }
 }

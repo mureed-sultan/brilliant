@@ -13,7 +13,7 @@ export default function() {
     'products/air-movement',
     'products/air-movement/celling-fan-with-light',
     'products/air-movement/celling-fan-without-light',
-    'docs/architecture',
+    'products/air-movement/exhaust-fan-only',
     'docs/samples',
     'docs/questions'
   ]);
